@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Manifest>
+  <ID>probably_not_human</ID>
+  <Name>Probably Not Human</Name>
+  <Author>Tundra</Author>
+  <ModVersion>1.2.0</ModVersion>
+  <Description>Lets AI agents like Claude Code, Codex or Cursor play the game through MCP. Runs locally. The agent plays on your real save, so use a spare slot. Requires the companion client: github.com/TundraWork/ProbablyNotHuman&#10;&#10;让 Claude Code、Codex、Cursor 这类 AI 工具通过 MCP 自己玩游戏。纯本地运行。AI 是在你的真存档上玩的，建议单独留一个存档位。需要安装配套客户端：github.com/TundraWork/ProbablyNotHuman</Description>
+  <GameVersions><Version>1.0.0</Version><Version>0.46D</Version></GameVersions>
+  <Prerequisites />
+  <Assemblies><Assembly>ProbablyNotHuman.dll</Assembly></Assemblies>
+  <Capabilities />
+</Manifest>

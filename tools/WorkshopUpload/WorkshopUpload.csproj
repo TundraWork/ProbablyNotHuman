@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Uses the game's own Steamworks.NET and steam_api64.dll, so the Steam interface versions always match the game's. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <RollForward>Major</RollForward>
+    <PlatformTarget>x64</PlatformTarget>
+    <GameDir Condition="'$(GameDir)' == ''">E:\Games\SteamLibrary\steamapps\common\Probably Stolen</GameDir>
+    <GameData>$(GameDir)\Probably Stolen_Data</GameData>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="com.rlabrecque.steamworks.net">
+      <HintPath>$(GameData)\Managed\com.rlabrecque.steamworks.net.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(GameData)\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <None Include="$(GameData)\Plugins\x86_64\steam_api64.dll" Link="steam_api64.dll" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

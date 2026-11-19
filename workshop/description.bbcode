@@ -1,0 +1,99 @@
+[i]中文说明见下方[/i]
+
+[h1]Probably Not Human[/h1]
+Let an AI agent run your shop.
+
+This mod exposes the game state and every player action to AI agents like Claude Code, Codex or Cursor, so they can play the game on their own: call customers, appraise, haggle, buy and sell, scavenge at night, pay the rent.
+
+[b]The mod does nothing by itself.[/b] You also need the companion client (free and open source) and an AI tool of your own:
+[url={repo_url}]{repo_url}[/url]
+
+[h2]Features[/h2]
+[list]
+[*]74 actions covering the whole game: day cycle, customers and dialogue, trading and bargaining, items and tools, night trips, phone, saves
+[*]Full game state as JSON: items and their real values, inventories, customers and budgets, bargain odds, calendar, news, documents
+[*]Wait conditions (customer ready, dialogue finished, day 12, ...), so the agent doesn't have to sleep or poll
+[*]Screenshots and virtual mouse/keyboard input for anything without a dedicated action
+[*]Works with any MCP client, and can also be used from the command line or as a Python library
+[*]Runs locally. The mod has no network access and needs no mod permissions
+[/list]
+
+[h2]Requirements[/h2]
+[list]
+[*]Python 3.10+
+[*]An MCP client such as Claude Code, Codex, Claude Desktop or Cursor, or any agent that can run shell commands
+[/list]
+
+[h2]Installation[/h2]
+[olist]
+[*]Subscribe, open [b]Mods[/b] in the game, activate [b]Probably Not Human[/b] and restart the game.
+[*]Install the client:
+[code]pip install {repo_url}/archive/refs/heads/main.zip[/code]
+[*]Start the game and check that the client can reach it:
+[code]probably-not-human health[/code]
+[*]Add the MCP server to your client. For Claude Code:
+[code]claude mcp add probably-stolen -- probably-not-human mcp[/code]
+[*]Ask your agent to play.
+[/olist]
+Config for other clients and troubleshooting are in the repository.
+
+[h2]Notes[/h2]
+[list]
+[*][b]The agent plays on your real save.[/b] It spends money, sells your stock and saves the game. Use a spare save slot.
+[*]The agent sees more than a player does. Real item values, customer budgets and bargain odds are all included.
+[*]The mod contains no strategy and gives the agent no hints. How well it plays depends on the model.
+[*]The client and the mod talk through files in the game's ModData folder. Other programs on your PC can read and write that folder too while the mod is active.
+[*]Tested on 1.0.0 (100-Rev13), Windows. A game update may break the mod until it is updated.
+[/list]
+
+Source code, documentation and bug reports: [url={repo_url}]{repo_url}[/url]
+
+[hr][/hr]
+
+[h1]Probably Not Human[/h1]
+让 AI 帮你看店。
+
+这个模组把游戏状态和玩家的所有操作开放给 Claude Code、Codex、Cursor 这类 AI 工具，让它们自己玩游戏：叫客、鉴定、砍价、买卖、半夜出门拾荒、交房租。
+
+[b]只装模组是没有效果的。[/b]还需要安装配套的客户端（免费开源），并且自备一个 AI 工具：
+[url={repo_url}]{repo_url}[/url]
+
+[h2]功能[/h2]
+[list]
+[*]74 个操作，覆盖整个游戏流程：开店关店、叫客对话、交易砍价、物品和工具、夜间外出、电话、存读档
+[*]游戏状态以 JSON 返回：物品及其真实价值、所有库存、顾客和预算、砍价成功率、日历、新闻、各种文档的内容
+[*]支持按条件等待（顾客到了、对话结束、到第 12 天……），不用 sleep，也不用轮询
+[*]没有专门操作的地方，可以用截图加模拟键鼠
+[*]支持所有 MCP 客户端，也可以用命令行，或者当 Python 库来用
+[*]纯本地运行，模组不联网，也不需要任何模组权限
+[/list]
+
+[h2]环境要求[/h2]
+[list]
+[*]Python 3.10+
+[*]支持 MCP 的 AI 客户端，比如 Claude Code、Codex、Claude Desktop、Cursor；或者任何能执行命令行的 AI 工具
+[/list]
+
+[h2]安装[/h2]
+[olist]
+[*]订阅后进游戏打开「改装件」，激活 [b]Probably Not Human[/b]，然后重启游戏。
+[*]安装客户端：
+[code]pip install {repo_url}/archive/refs/heads/main.zip[/code]
+[*]启动游戏，检查能不能连上：
+[code]probably-not-human health[/code]
+[*]在 AI 客户端里添加 MCP Server。以 Claude Code 为例：
+[code]claude mcp add probably-stolen -- probably-not-human mcp[/code]
+[*]让 AI 开玩。
+[/olist]
+其他客户端的配置方法和常见问题见仓库。
+
+[h2]注意事项[/h2]
+[list]
+[*][b]AI 是在你的真存档上玩的。[/b]会花钱、会卖货、会存档。建议专门给它留一个存档位。
+[*]AI 能看到的信息比玩家多，物品真实价值、顾客预算、砍价成功率都在里面。
+[*]模组本身不带任何策略，也不会给 AI 提示，玩得好不好全看模型。
+[*]客户端和模组通过游戏 ModData 目录下的文件通信。模组启用期间，电脑上的其他程序也能读写这个目录。
+[*]在 1.0.0（100-Rev13）Windows 版上测试。游戏更新后模组可能会失效，需要等模组更新。
+[/list]
+
+源码、文档和问题反馈：[url={repo_url}]{repo_url}[/url]

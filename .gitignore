@@ -1,0 +1,11 @@
+mod/bin/
+mod/obj/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+build/
+dist/
+tools/*/bin/
+tools/*/obj/
+runs/
